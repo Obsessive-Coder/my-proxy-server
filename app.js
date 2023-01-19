@@ -26,6 +26,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/:endpoint', (req, res) => {
+  console.log('akljf;ldsakjfkl;dsajflkadsjflksadjf;lkads')
   request(
     { url: `http://ecomm-server-dev-env.eba-nrdkp8bh.us-east-1.elasticbeanstalk.com/api/${req.params.endpoint}` },
     (error, response, body) => {
