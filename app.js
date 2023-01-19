@@ -25,6 +25,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/', (req, res) => {
+  res.send({ abc: 'def' })
+})
+
 app.get('/:endpoint', (req, res) => {
   console.log('akljf;ldsakjfkl;dsajflkadsjflksadjf;lkads')
   request(
