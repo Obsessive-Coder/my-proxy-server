@@ -25,7 +25,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/jokes/random/:endpoint', (req, res) => {
+app.get('/:endpoint', (req, res) => {
   request(
     { url: `http://ecomm-server-dev-env.eba-nrdkp8bh.us-east-1.elasticbeanstalk.com/api/${req.params.endpoint}` },
     (error, response, body) => {
